@@ -4,10 +4,9 @@ with open("requirements.txt") as requirements_file:
     REQUIREMENTS = requirements_file.readlines()
 
 setup(
-    name="pytorch-playground",
+    name="PretrainedCIFAR10",
     version="1.0.0",
-    author='Aaron Chen',
-    author_email='aaron.xichen@gmail.com',
+    author='Arnout Devos',
     packages=find_packages(),
     entry_points = {
         'console_scripts': [
