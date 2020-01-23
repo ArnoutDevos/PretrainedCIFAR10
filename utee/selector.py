@@ -1,6 +1,5 @@
 from utee import misc
 import os
-from dataset import dataset
 print = misc.logger.info
 from IPython import embed
 
@@ -161,7 +160,7 @@ def squeezenet_v1(cuda=True, model_root=None):
 
 def select(model_name, **kwargs):
     assert model_name in known_models, model_name
-    kwargs.setdefault('model_root', os.path.expanduser('~/.torch/models'))
+    kwargs.setdefault('model_root', os.path.expanduser('./data/'))
     return eval('{}'.format(model_name))(**kwargs)
 
 if __name__ == '__main__':
